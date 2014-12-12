@@ -1,6 +1,6 @@
 {
   "name": "arr-union",
-  "description": "Returns an array of unique values using strict equality for comparisons, maintaining the same order as the provided arrays .",
+  "description": "Returns an array of unique values using strict equality for comparisons, maintaining the same order as the provided arrays.",
   "version": "1.0.0",
   "homepage": "https://github.com/jonschlinkert/arr-union",
   "author": {
