@@ -1,0 +1,46 @@
+{
+  "name": "arr-union",
+  "description": "Returns an array of unique values using strict equality for comparisons, maintaining the same order as the provided arrays .",
+  "version": "1.0.0",
+  "homepage": "https://github.com/jonschlinkert/arr-union",
+  "author": {
+    "name": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jonschlinkert/arr-union.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/arr-union/issues"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/jonschlinkert/arr-union/blob/master/LICENSE-MIT"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "^4.3.1"
+  },
+  "dependencies": {
+    "array-unique": "^0.1.1"
+  },
+  "keywords": [
+    "array",
+    "concat",
+    "union",
+    "unique",
+    "javascript",
+    "js",
+    "util",
+    "utility",
+    "utils"
+  ]
+}
