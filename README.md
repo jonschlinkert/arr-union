@@ -32,7 +32,7 @@ union(['a', 'a'], ['b', 'c']);
 + [twitter/jonschlinkert](http://twitter.com/jonschlinkert) 
 
 ## License
-Copyright (c) 2014 Jon Schlinkert  
+Copyright (c) 2014-2015, Jon Schlinkert.
 Released under the MIT license
 
 ***
