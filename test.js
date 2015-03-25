@@ -2,11 +2,12 @@
  * arr-union <https://github.com/jonschlinkert/arr-union>
  *
  * Copyright (c) 2014-2015, Jon Schlinkert.
- * Licensed under the MIT License
+ * Licensed under the MIT License.
  */
 
 'use strict';
 
+/* deps:mocha */
 var path = require('path');
 var argv = require('minimist')(process.argv.slice(2));
 var should = require('should');
