@@ -2,14 +2,14 @@
 
 module.exports = function union() {
   var len = arguments.length;
-  var res = [];
+  var res = [], i = 0;
 
   while (len--) {
-    var arg = arguments[len];
-    var alen = arg.length;
+    var arg = arguments[i++];
+    var alen = arg.length, j = 0;
 
     while (alen--) {
-      var ele = arg[alen];
+      var ele = arg[j++];
 
       if (res.indexOf(ele) === -1) {
         res.push(ele);

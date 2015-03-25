@@ -13,7 +13,7 @@ fs.readdirSync(__dirname + '/code').forEach(function (fp) {
   var fn = require(path.resolve(__dirname, 'code', fp));
   var name = path.basename(fp, path.extname(fp));
 
-  if (/./.test(name)) {
+  if (/^current|array/.test(name)) {
     fs.readdirSync(__dirname + '/fixtures').forEach(function (fixture) {
       fixture = path.resolve(__dirname, 'fixtures', fixture);
       if (/\.js$/.test(fixture)) {
