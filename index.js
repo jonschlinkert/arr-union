@@ -8,14 +8,11 @@
 'use strict';
 
 module.exports = function union(arr) {
-  if (!Array.isArray(arr)) {
-    throw new Error('arr-union expects an array as the first argument.');
-  }
   var len = arguments.length;
   var res = [], i = 0;
 
   while (len--) {
-    var arg = arguments[i++];
+    var arg = arrayify(arguments[i++]);
 
     for (var j = 0; j < arg.length; j++) {
       var ele = arg[j];
@@ -27,3 +24,7 @@ module.exports = function union(arr) {
   }
   return res;
 };
+
+function arrayify(val) {
+  return Array.isArray(val) ? val : [val];
+}
