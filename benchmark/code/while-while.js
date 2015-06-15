@@ -5,7 +5,7 @@ module.exports = function union() {
   var res = [], i = 0;
 
   while (len--) {
-    var arg = arguments[i++];
+    var arg = arrayify(arguments[i++]);
     var alen = arg.length, j = 0;
 
     while (alen--) {
@@ -18,3 +18,7 @@ module.exports = function union() {
   }
   return res;
 };
+
+function arrayify(val) {
+  return Array.isArray(val) ? val : [val];
+}
