@@ -18,12 +18,20 @@ if (argv._.length) {
 }
 
 describe('union', function () {
+  it('should add elements to the original array:', function () {
+    var arr = ['a'];
+    union(arr, ['b', 'c'], ['a'], ['b', 'c'], ['d', 'e', 'f']).sort()
+    arr.should.eql(['a', 'b', 'c', 'd', 'e', 'f'].sort());
+  });
+
   it('should union all elements in the given arrays:', function () {
     union(['a'], ['b', 'c'], ['d', 'e', 'f']).sort().should.eql(['a', 'b', 'c', 'd', 'e', 'f'].sort());
   });
 
-  it('should uniquify the arrays:', function () {
-    union(['a'], ['b', 'c'], ['a'], ['b', 'c'], ['d', 'e', 'f']).sort().should.eql(['a', 'b', 'c', 'd', 'e', 'f'].sort());
+  it('should uniquify elements from additional arrays:', function () {
+    var arr = ['a', 'b', 'c'];
+    var res = union(arr, ['b', 'c'], ['a'], ['b', 'c'], ['d', 'e', 'f']).sort()
+    res.should.eql(['a', 'b', 'c', 'd', 'e', 'f'].sort());
   });
 });
 
