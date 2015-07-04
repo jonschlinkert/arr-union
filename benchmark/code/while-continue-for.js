@@ -1,21 +1,19 @@
 'use strict';
 
-module.exports = function union() {
-  var len = arguments.length;
-  var res = [];
+module.exports = function union(init) {
+  var len = arguments.length, i = 0;
 
-  while (len--) {
-    var arg = arguments[len];
+  while (++i < len) {
+    var arg = arguments[i];
 
     for (var j = 0; j < arg.length; j++) {
       var ele = arg[j];
 
-      if (res.indexOf(ele) >= 0) {
+      if (init.indexOf(ele) >= 0) {
         continue;
       }
-
-      res.push(ele);
+      init.push(ele);
     }
   }
-  return res;
+  return init;
 };

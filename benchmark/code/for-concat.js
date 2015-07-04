@@ -2,13 +2,12 @@
 
 var unique = require('array-unique');
 
-module.exports = function union() {
+module.exports = function union(init) {
   var len = arguments.length;
-  var res = [];
 
-  for (var i = 0; i < len; i++) {
-    res = res.concat(arguments[i]);
+  for (var i = 1; i < len; i++) {
+    init = init.concat(arguments[i]);
   }
 
-  return unique(res);
+  return unique(init);
 };

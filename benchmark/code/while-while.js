@@ -1,22 +1,21 @@
 'use strict';
 
-module.exports = function union() {
-  var len = arguments.length;
-  var res = [], i = 0;
+module.exports = function union(init) {
+  var len = arguments.length, i = 0;
 
-  while (len--) {
-    var arg = arrayify(arguments[i++]);
+  while (++i < len) {
+    var arg = arrayify(arguments[i]);
     var alen = arg.length, j = 0;
 
     while (alen--) {
       var ele = arg[j++];
 
-      if (res.indexOf(ele) === -1) {
-        res.push(ele);
+      if (init.indexOf(ele) === -1) {
+        init.push(ele);
       }
     }
   }
-  return res;
+  return init;
 };
 
 function arrayify(val) {

@@ -2,14 +2,14 @@
 
 var unique = require('array-unique');
 
-module.exports = function union() {
-  var arr = [].slice.call(arguments);
+module.exports = function union(init) {
+  var arr = [].slice.call(arguments, 1);
   var len = arr.length;
-  var res = [];
 
   for (var i = 0; i < len; i++) {
-    res = res.concat(arr[i]);
+    init = init.concat(arr[i]);
   }
 
-  return unique(res);
+  init = unique(init);
+  return init;
 };
