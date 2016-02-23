@@ -3,14 +3,8 @@
   "description": "Combines a list of arrays, returning a single array with unique values, using strict equality for comparisons.",
   "version": "3.0.0",
   "homepage": "https://github.com/jonschlinkert/arr-union",
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jonschlinkert/arr-union.git"
-  },
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/arr-union",
   "bugs": {
     "url": "https://github.com/jonschlinkert/arr-union/issues"
   },
@@ -31,8 +25,8 @@
     "array-unique": "^0.2.1",
     "benchmarked": "^0.1.4",
     "minimist": "^1.1.1",
-    "mocha": "^2.2.5",
-    "should": "^7.0.1"
+    "mocha": "*",
+    "should": "*"
   },
   "keywords": [
     "add",
@@ -48,5 +42,10 @@
     "util",
     "utility",
     "utils"
-  ]
+  ],
+  "verb": {
+    "related": {
+      "list": []
+    }
+  }
 }
