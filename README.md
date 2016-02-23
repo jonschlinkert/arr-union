@@ -1,33 +1,33 @@
-# arr-union [![NPM version](https://badge.fury.io/js/arr-union.svg)](http://badge.fury.io/js/arr-union)  [![Build Status](https://travis-ci.org/jonschlinkert/arr-union.svg)](https://travis-ci.org/jonschlinkert/arr-union)
+# arr-union [![NPM version](https://img.shields.io/npm/v/arr-union.svg)](https://www.npmjs.com/package/arr-union) [![Build Status](https://img.shields.io/travis/jonschlinkert/arr-union.svg)](https://travis-ci.org/jonschlinkert/arr-union)
 
 > Combines a list of arrays, returning a single array with unique values, using strict equality for comparisons.
 
-This library is **20-30 times faster** and more performant (scales better) than [array-union](https://github.com/sindresorhus/array-union), which just uses `[].concat.apply([], arguments)`.
+## Install
+
+Install with [npm](https://www.npmjs.com/):
+
+```sh
+$ npm i arr-union --save
+```
 
 ## Benchmarks
+
+This library is **10-20 times faster** and more performant than [array-union](https://github.com/sindresorhus/array-union).
 
 See the [benchmarks](./benchmark).
 
 ```sh
 #1: five-arrays
-  array-union x 243,091 ops/sec ±0.43% (100 runs sampled)
-  arr-union x 7,141,833 ops/sec ±0.33% (101 runs sampled)
+  array-union x 511,121 ops/sec ±0.80% (96 runs sampled)
+  arr-union x 5,716,039 ops/sec ±0.86% (93 runs sampled)
 
 #2: ten-arrays
-  array-union x 118,600 ops/sec ±0.38% (99 runs sampled)
-  arr-union x 2,112,268 ops/sec ±0.36% (98 runs sampled)
+  array-union x 245,196 ops/sec ±0.69% (94 runs sampled)
+  arr-union x 1,850,786 ops/sec ±0.84% (97 runs sampled)
 
 #3: two-arrays
-  array-union x 318,757 ops/sec ±0.39% (99 runs sampled)
-  arr-union x 10,145,772 ops/sec ±0.23% (100 runs sampled)
-```
-
-## Install
-
-Install with [npm](https://www.npmjs.com/)
-
-```sh
-$ npm i arr-union --save
+  array-union x 563,869 ops/sec ±0.97% (94 runs sampled)
+  arr-union x 9,602,852 ops/sec ±0.87% (92 runs sampled)
 ```
 
 ## Usage
@@ -46,15 +46,33 @@ union(['a', 'a'], ['b', 'c']);
 //=> ['a', 'b', 'c']
 ```
 
-## Other array utilities
+## Related projects
 
-* [arr-diff](https://github.com/jonschlinkert/arr-diff): Returns an array with only the unique values from the first array, by excluding all… [more](https://github.com/jonschlinkert/arr-diff)
-* [arr-flatten](https://github.com/jonschlinkert/arr-flatten): Recursively flatten an array or arrays. This is the fastest implementation of array flatten.
-* [arr-filter](https://github.com/jonschlinkert/arr-filter): Faster alternative to javascript's native filter method.
-* [arr-map](https://github.com/jonschlinkert/arr-map): Faster, node.js focused alternative to JavaScript's native array map.
-* [arr-pluck](https://github.com/jonschlinkert/arr-pluck): Retrieves the value of a specified property from all elements in the collection.
-* [arr-reduce](https://github.com/jonschlinkert/arr-reduce): Fast array reduce that also loops over sparse elements.
-* [array-unique](https://github.com/jonschlinkert/array-unique): Return an array free of duplicate values. Fastest ES5 implementation.
+* [arr-diff](https://www.npmjs.com/package/arr-diff): Returns an array with only the unique values from the first array, by excluding all… [more](https://www.npmjs.com/package/arr-diff) | [homepage](https://github.com/jonschlinkert/arr-diff)
+* [arr-filter](https://www.npmjs.com/package/arr-filter): Faster alternative to javascript's native filter method. | [homepage](https://github.com/jonschlinkert/arr-filter)
+* [arr-flatten](https://www.npmjs.com/package/arr-flatten): Recursively flatten an array or arrays. This is the fastest implementation of array flatten. | [homepage](https://github.com/jonschlinkert/arr-flatten)
+* [arr-map](https://www.npmjs.com/package/arr-map): Faster, node.js focused alternative to JavaScript's native array map. | [homepage](https://github.com/jonschlinkert/arr-map)
+* [arr-pluck](https://www.npmjs.com/package/arr-pluck): Retrieves the value of a specified property from all elements in the collection. | [homepage](https://github.com/jonschlinkert/arr-pluck)
+* [arr-reduce](https://www.npmjs.com/package/arr-reduce): Fast array reduce that also loops over sparse elements. | [homepage](https://github.com/jonschlinkert/arr-reduce)
+* [array-unique](https://www.npmjs.com/package/array-unique): Return an array free of duplicate values. Fastest ES5 implementation. | [homepage](https://github.com/jonschlinkert/array-unique)
+
+## Contributing
+
+Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/jonschlinkert/arr-union/issues/new).
+
+## Building docs
+
+Generate readme and API documentation with [verb](https://github.com/verbose/verb):
+
+```sh
+$ npm i verb && npm run docs
+```
+
+Or, if [verb](https://github.com/verbose/verb) is installed globally:
+
+```sh
+$ verb
+```
 
 ## Running tests
 
@@ -64,22 +82,18 @@ Install dev dependencies:
 $ npm i -d && npm test
 ```
 
-## Contributing
-
-Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/jonschlinkert/arr-union/issues/new)
-
 ## Author
 
 **Jon Schlinkert**
 
-+ [github/jonschlinkert](https://github.com/jonschlinkert)
-+ [twitter/jonschlinkert](http://twitter.com/jonschlinkert)
+* [github/jonschlinkert](https://github.com/jonschlinkert)
+* [twitter/jonschlinkert](http://twitter.com/jonschlinkert)
 
 ## License
 
-Copyright © 2015 Jon Schlinkert
-Released under the MIT license.
+Copyright © 2016 [Jon Schlinkert](https://github.com/jonschlinkert)
+Released under the [MIT license](https://github.com/jonschlinkert/arr-union/blob/master/LICENSE).
 
 ***
 
-_This file was generated by [verb-cli](https://github.com/assemble/verb-cli) on July 04, 2015._
+_This file was generated by [verb](https://github.com/verbose/verb), v0.9.0, on February 23, 2016._
