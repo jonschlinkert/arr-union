@@ -10,6 +10,11 @@ module.exports = function union(init) {
 
   while (++i < len) {
     var arg = arguments[i];
+    if (!arg) continue;
+
+    if (!Array.isArray(arg)) {
+      arg = [arg];
+    }
 
     for (var j = 0; j < arg.length; j++) {
       var ele = arg[j];
