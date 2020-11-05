@@ -7,7 +7,6 @@ node_js:
   - "stable"
   - "12"
   - "10"
-  - "8"
 matrix:
   fast_finish: true
   allow_failures:
