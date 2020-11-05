@@ -5,11 +5,10 @@ arch:
   - ppc64le
 node_js:
   - "stable"
-  - "5"
-  - "4"
   - "12"
   - "10"
+  - "8"
 matrix:
   fast_finish: true
   allow_failures:
-    - node_js: "0.10"
+    - node_js: "10"
