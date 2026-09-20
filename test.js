@@ -41,5 +41,10 @@ describe('union', function() {
     var res = union(arr, ['b', 'c'], ['a'], ['b', 'c'], ['d', 'e', 'f']).sort()
     res.should.eql(['a', 'b', 'c', 'd', 'e', 'f'].sort());
   });
-});
 
+  it('should uniquify elements in the first array:', function() {
+    union(['a', 'a'], ['b', 'c']).should.eql(['a', 'b', 'c']);
+    union(['a', 'b', 'a'], ['b', 'c']).should.eql(['a', 'b', 'c']);
+  });
+
+});
