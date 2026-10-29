@@ -39,10 +39,20 @@ union(['a'], ['b', 'c'], ['d', 'e', 'f']);
 //=> ['a', 'b', 'c', 'd', 'e', 'f']
 ```
 
-Returns only unique elements:
+The first array is modified and returned. Only values from the additional
+arrays are checked for duplicates, so duplicates already in the first array
+are preserved:
 
 ```js
 union(['a', 'a'], ['b', 'c']);
+//=> ['a', 'a', 'b', 'c']
+```
+
+Pass an empty array first to get unique values from all of the input arrays
+without modifying them:
+
+```js
+union([], ['a', 'a'], ['b', 'c']);
 //=> ['a', 'b', 'c']
 ```
 
